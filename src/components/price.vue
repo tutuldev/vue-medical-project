@@ -22,7 +22,7 @@
 								</div>
 								<h4 class="title">Plastic Suggery</h4>
 								<div class="price">
-									<p class="amount">$199<span>/ Per Visit</span></p>
+									<p class="amount">${{ price }}<span>/ Per Visit</span></p>
 								</div>	
 							</div>
 							<!-- Table List -->
@@ -101,3 +101,15 @@
 		</section>	
 		<!--/ End Pricing Table -->
 </template>
+
+<script>
+	export default {
+		props: {
+			price: {
+				type: Number,
+				required: true,
+				default: '2300'
+			}
+		}
+	}
+</script>

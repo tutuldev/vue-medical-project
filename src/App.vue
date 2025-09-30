@@ -10,12 +10,12 @@
 <mycalltoaction/>
 <myportfolio/>
 <myservice/>
-<myprice/>
+<myprice price="500"/>
 <myblog/>
 <myclient/>
 <myappointment/>
 <mynewsletter/>
-<myfooter/>
+<myfooter copyright="Nirob It Solutions"/>
 </template>
 
 <script >

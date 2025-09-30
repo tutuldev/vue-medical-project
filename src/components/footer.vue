@@ -77,7 +77,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.nirobit.com" target="_blank">{{ copyright }}</a> </p>
 							</div>
 						</div>
 					</div>
@@ -87,3 +87,19 @@
 		</footer>
 		<!--/ End Footer Area -->
 </template>
+
+<script>
+	// export default {
+	// 	props: ['copyright']
+	// }
+
+	export default {
+		props: {
+			'copyright': {
+				type: String,
+				required: true,
+				default: 'It Solutions'
+			}	
+		}
+	}
+</script>
