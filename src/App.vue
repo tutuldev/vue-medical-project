@@ -10,7 +10,10 @@
 <mycalltoaction/>
 <myportfolio/>
 <myservice/>
-<myprice price="500"/>
+<!-- <myprice price="500"/> -->
+<!-- <myprice v-bind:price="setprice"/> -->
+<!-- <myprice v-for="singelprice in setprice" v-bind:price="setprice"/> -->
+<myprice v-for="singelprice in setprice" v-bind:price="singelprice"/>
 <myblog/>
 <myclient/>
 <myappointment/>
@@ -55,6 +58,13 @@ export default{
       myappointment,
       mynewsletter,
       myfooter
+    },
+    data(){
+      return{
+        cell: "01712345678",
+        // setprice: 6020
+        setprice: ['100','200','300','400','500']
+      }
     }
 }
 </script>
