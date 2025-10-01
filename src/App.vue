@@ -2,7 +2,7 @@
 
 <template>
 <Mymenu/>
-<myslider/>
+<myslider @getinformation="receivedchildinfo"/>
 <myschedule/>
 <myfeature/>
 <myfun/>
@@ -13,7 +13,8 @@
 <!-- <myprice price="500"/> -->
 <!-- <myprice v-bind:price="setprice"/> -->
 <!-- <myprice v-for="singelprice in setprice" v-bind:price="setprice"/> -->
-<myprice v-for="singelprice in setprice" v-bind:price="singelprice"/>
+<!-- <myprice v-for="singelprice in setprice" v-bind:price="singelprice"/> -->
+<myprice v-for="singelprice in setprice" v-bind:price="setprice"/>
 <myblog/>
 <myclient/>
 <myappointment/>
@@ -64,6 +65,11 @@ export default{
         cell: "01712345678",
         // setprice: 6020
         setprice: ['100','200','300','400','500']
+      }
+    },
+    methods:{
+      receivedchildinfo(){
+        alert("Allah is Mohan");
       }
     }
 }

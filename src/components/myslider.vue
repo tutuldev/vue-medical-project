@@ -12,7 +12,7 @@
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
 									<div class="button">
 										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">Learn More</a>
+										<a href="#" @click="getinfo()" class="btn primary">Learn More2</a>
 									</div>
 								</div>
 							</div>
@@ -60,3 +60,19 @@
 		</section>
 		<!--/ End Slider Area -->
 </template>
+<script>
+export default{
+	
+	data(){
+		return{
+			
+		}
+	},
+	methods:{
+		getinfo(){
+			// alert("My Cell Number is: 01712345678");
+			this.$emit('getinformation')
+		}
+	}
+}
+</script>
