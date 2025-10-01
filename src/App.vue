@@ -20,6 +20,7 @@
 <myappointment/>
 <mynewsletter/>
 <myfooter copyright="Nirob It Solutions"/>
+{{ discount }}
 </template>
 
 <script >
@@ -64,12 +65,20 @@ export default{
       return{
         cell: "01712345678",
         // setprice: 6020
-        setprice: ['100','200','300','400','500']
+        setprice: ['100','200','300','400','500'],
+        discount:0,
       }
     },
     methods:{
-      receivedchildinfo(){
-        alert("Allah is Mohan");
+      receivedchildinfo(getprice){
+        // alert("Allah is Mohan");
+        // alert("Price is: "+getprice);
+        if(getprice>=300){
+          this.discount=30;
+      }else
+      {
+        this.discount=10;
+      }
       }
     }
 }

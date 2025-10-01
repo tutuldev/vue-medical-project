@@ -65,13 +65,16 @@ export default{
 	
 	data(){
 		return{
-			
+			// price:10
+			// price:["10","20","30"]
+			price:30
 		}
 	},
 	methods:{
 		getinfo(){
 			// alert("My Cell Number is: 01712345678");
-			this.$emit('getinformation')
+			// this.$emit('getinformation')
+			this.$emit('getinformation',this.price)
 		}
 	}
 }
