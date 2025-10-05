@@ -1,6 +1,7 @@
 <template>
 	<!-- Header Area -->
 		<header class="header" >
+		<!-- <header class="head" > ekahne scope er maddome scope er baire jabe na -->
 			<!-- Topbar -->
 			<div class="topbar">
 				<div class="container">
@@ -114,3 +115,8 @@
 		}
 	}
 </script>
+ <style scoped>
+  .head {
+    background-color: red;
+  }
+  </style>
