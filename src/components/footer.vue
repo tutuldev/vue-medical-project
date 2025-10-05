@@ -1,6 +1,7 @@
 <template>
     	<!-- Footer Area -->
-		<footer id="footer" class="footer ">
+		<footer id="footer" class="footer " > 
+			<!-- class="footer " eta bad diye pass kora jai -->
 			<!-- Footer Top -->
 			<div class="footer-top">
 				<div class="container">
@@ -63,7 +64,7 @@
 								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
 									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
 										onblur="this.placeholder = 'Your email address'" required type="email">
-									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+									<button @click="showinfo" class="button"><i class="icofont icofont-paper-plane"></i></button>
 								</form>
 							</div>
 						</div>
@@ -100,6 +101,11 @@
 				required: true,
 				default: 'It Solutions'
 			}	
+		},
+		methods:{
+			showinfo(){
+				alert("Thanks for subscribe");
+			}
 		}
 	}
 </script>

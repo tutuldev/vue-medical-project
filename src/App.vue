@@ -19,7 +19,13 @@
 <myclient/>
 <myappointment/>
 <mynewsletter/>
-<myfooter copyright="Nirob It Solutions"/>
+<!-- <myfooter class="footer" copyright="Nirob It Solutions"/> -->
+<!-- <myfooter style="background-color: red;" copyright="Nirob It Solutions"/> -->
+<myfooter @click="parentinfo" copyright="Nirob It Solutions"/>
+
+<!-- class, style, v-on , we can pass -->
+
+
 {{ discount }}
 </template>
 
@@ -79,6 +85,9 @@ export default{
       {
         this.discount=10;
       }
+      },
+      parentinfo(){
+        alert("This is parent info");
       }
     }
 }
