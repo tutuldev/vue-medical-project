@@ -8,14 +8,20 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-5 col-12">
 							<!-- {{ mytopmenu }} -->
+
+							<!-- slot use korle cpmtamt patano jabe -->
+							<slot></slot> 
+
 							<!-- Contact -->
-							<ul class="top-link">
+							<!-- <ul class="top-link">
 								<li v-for="menu in mytopmenu"><a :href="menu.url">{{ menu.name }}</a></li>
+							
+							</ul> -->
+
 								<!-- <li><a href="#">About</a></li>
 								<li><a href="#">Doctors</a></li>
 								<li><a href="#">Contact</a></li>
 								<li><a href="#">FAQ</a></li> -->
-							</ul>
 							<!-- End Contact -->
 						</div>
 						<div class="col-lg-6 col-md-7 col-12">
@@ -47,7 +53,8 @@
 							</div>
 							<div class="col-lg-7 col-md-9 col-12">
 								<!-- Main Menu -->
-								<div class="main-menu">
+								 <!-- ekhane ew slot diye test korbo  -->
+								<!-- <div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
 											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
@@ -70,7 +77,7 @@
 											<li><a href="contact.html">Contact Us</a></li>
 										</ul>
 									</nav>
-								</div>
+								</div> -->
 								<!--/ End Main Menu -->
 							</div>
 							<div class="col-lg-2 col-12">
@@ -93,24 +100,7 @@
 			return {
 				cell: "+880 123 456 789",
 				email: "niorb@gmail.com",
-				mytopmenu: [
-					{
-						name: "About",
-						url: "#"
-					},
-					{
-						name: "Doctors",
-						url: "#"
-					},
-					{
-						name: "Contact",
-						url: "#"
-					},
-					{
-						name: "FAQ",
-						url: "#"
-					}
-				]
+				
 			}	
 		}
 	}

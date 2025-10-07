@@ -1,5 +1,43 @@
 <template>
-  <Mymenu />
+  <!-- <Mymenu /> -->
+   <!-- nicher moto kore open close kore likhle er vitor onno kicu o lekha jabe  -->
+  <Mymenu> 
+    <ul class="top-link">
+                 <li v-for="mysingelmenu in mytopmenu"><a :href="mysingelmenu.url">{{ mysingelmenu.name }}</a></li>
+
+								<!-- <li><a href="#">| About</a></li>
+								<li><a href="#">| Contact</a></li>
+								<li><a href="#">| Blog</a></li>
+								<li><a href="#">| Service</a></li>						 -->
+							</ul>
+
+              <!-- main menu test  -->
+              <!-- <div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="index.html">Home Page 1</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Doctos </a></li>
+											<li><a href="#">Services </a></li>
+											<li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="404.html">404 Error</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="blog-single.html">Blog Details</a></li>
+												</ul>
+											</li>
+											<li><a href="contact.html">Contact Us</a></li>
+										</ul>
+									</nav>
+								</div> -->
+
+  </Mymenu>
   <myslider @getinformation="receivedchildinfo" />
   <myschedule />
   <myfeature />
@@ -70,7 +108,25 @@ export default {
       // setprice: 6020
       setprice: ["100", "200", "300", "400", "500"],
       discount: 0,
-    };
+      mytopmenu: [
+					{
+						name: "About",
+						url: "about"
+					},
+					{
+						name: "Doctors",
+						url: "doctors"
+					},
+					{
+						name: "Contact",
+						url: "contact"
+					},
+					{
+						name: "FAQ",
+						url: "faq"
+					}
+				]
+    }
   },
   methods: {
     receivedchildinfo(getprice) {
