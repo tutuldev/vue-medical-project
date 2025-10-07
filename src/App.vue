@@ -2,7 +2,8 @@
   <!-- <Mymenu /> -->
    <!-- nicher moto kore open close kore likhle er vitor onno kicu o lekha jabe  -->
   <Mymenu> 
-    <ul class="top-link">
+    <template v-slot:topmenu>
+      <ul class="top-link">
                  <li v-for="mysingelmenu in mytopmenu"><a :href="mysingelmenu.url">{{ mysingelmenu.name }}</a></li>
 
 								<!-- <li><a href="#">| About</a></li>
@@ -10,9 +11,11 @@
 								<li><a href="#">| Blog</a></li>
 								<li><a href="#">| Service</a></li>						 -->
 							</ul>
+    </template>
 
-              <!-- main menu test  -->
-              <!-- <div class="main-menu">
+          <template v-slot:mainmenu>
+                <!-- main menu test  -->
+              <div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
 											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
@@ -35,7 +38,16 @@
 											<li><a href="contact.html">Contact Us</a></li>
 										</ul>
 									</nav>
-								</div> -->
+								</div>
+          </template>
+
+          <template v-slot:topcontact>
+               <!-- top contact test  -->
+            	<ul class="top-contact">
+								<li><i class="fa fa-phone"></i>{{ cell }}</li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">{{email}}</a></li>
+							</ul>
+          </template>
 
   </Mymenu>
   <myslider @getinformation="receivedchildinfo" />

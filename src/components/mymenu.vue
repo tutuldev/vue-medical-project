@@ -10,7 +10,7 @@
 							<!-- {{ mytopmenu }} -->
 
 							<!-- slot use korle cpmtamt patano jabe -->
-							<slot></slot> 
+							<slot name="topmenu"></slot> 
 
 							<!-- Contact -->
 							<!-- <ul class="top-link">
@@ -26,10 +26,7 @@
 						</div>
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
-							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>{{ cell }}</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">{{email}}</a></li>
-							</ul>
+							<slot name="topcontact"></slot>
 							<!-- End Top Contact -->
 						</div>
 					</div>
@@ -79,6 +76,7 @@
 									</nav>
 								</div> -->
 								<!--/ End Main Menu -->
+								<slot name="mainmenu"></slot>
 							</div>
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
