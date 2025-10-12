@@ -1,0 +1,8 @@
+<template>
+ <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</template>
+
+<script>
+
+</script>
